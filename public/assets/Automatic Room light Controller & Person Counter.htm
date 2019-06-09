@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en-US"><head>
+   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes">
+
+<title>Automatic Room light Controller &amp; Person Counter</title>
+
+<!-- All in One SEO Pack 2.11 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+<meta name="description" content="It measures &amp; displays number of persons in a room / seminar hall / conference room. Power supply in room is turned off using relay if number of personsis zero">
+
+<meta name="keywords" content="automatic room light controller with visitor counter,bidirectional person counter,bidirectional visitor counter,automatic room light controller,visitor counter,8051 based microcontroller projects,automatic room light controller with visitor counter using microcontroller,electronics projects,555,89v51rd2,bc547,bulb,buzzer,darlington pair,infrared,ldr,relay,tsop1738">
+
+<link rel="canonical" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/">
+<meta property="og:title" content="Automatic Room light Controller &amp; Person Counter">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/">
+<meta property="og:site_name" content="Microtronics Technologies">
+<meta property="og:description" content="It measures &amp; displays number of persons in a room / seminar hall / conference room. Power supply in room is turned off using relay if number of personsis zero">
+<meta property="article:published_time" content="2013-06-10T11:16:35Z">
+<meta property="article:modified_time" content="2018-07-29T05:59:29Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mtronixtech">
+<meta name="twitter:title" content="Automatic Room light Controller &amp; Person Counter">
+<meta name="twitter:description" content="It measures &amp; displays number of persons in a room / seminar hall / conference room. Power supply in room is turned off using relay if number of personsis zero">
+			<script type="text/javascript">
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', 'UA-42869320-1', 'auto');
+				// Plugins
+				
+				ga('send', 'pageview');
+			</script>
+			<script async="" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/analytics.js"></script>
+			<!-- /all in one seo pack -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Microtronics Technologies » Feed" href="https://www.projectsof8051.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Microtronics Technologies » Comments Feed" href="https://www.projectsof8051.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Microtronics Technologies » Automatic Room light Controller with Visitor Counter Comments Feed" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.projectsof8051.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6f9504f94c7bed8383af32df81a856b8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/c5725.css" media="all">
+
+
+
+
+
+
+
+
+
+<link crossorigin="anonymous" rel="stylesheet" id="google-fonts-css" href="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/css" type="text/css" media="all">
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type="text/javascript" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/548e5.js"></script>
+
+
+
+<!--[if IE 8]>
+<script type='text/javascript' src='https://www.projectsof8051.com/wp-content/themes/alhena-lite/assets/scripts/html5.js?ver=6f9504f94c7bed8383af32df81a856b8'></script>
+<![endif]-->
+<!--[if IE 8]>
+<script type='text/javascript' src='https://www.projectsof8051.com/wp-content/themes/alhena-lite/assets/scripts/selectivizr-min.js?ver=6f9504f94c7bed8383af32df81a856b8'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://www.projectsof8051.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.projectsof8051.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.projectsof8051.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Industrial Automation Using Cellphone" href="https://www.projectsof8051.com/industrial-automation-using-cellphone/">
+<link rel="next" title="GSM based Home Security System" href="https://www.projectsof8051.com/gsm-based-home-security-system/">
+
+<link rel="shortlink" href="https://www.projectsof8051.com/?p=200">
+<link rel="alternate" type="application/json+oembed" href="https://www.projectsof8051.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.projectsof8051.com%2Fautomatic-room-light-controller-with-visitor-counter%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.projectsof8051.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.projectsof8051.com%2Fautomatic-room-light-controller-with-visitor-counter%2F&amp;format=xml">
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.projectsof8051.com/?wordfence_lh=1&hid=C73D6F154A65713930310AA7F759C929');
+</script><style data-context="foundation-flickity-css">/*! Flickity v2.0.2
+http://flickity.metafizzy.co
+---------------------------------------------- */.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-prev-next-button{position:absolute;top:50%;width:44px;height:44px;border:none;border-radius:50%;background:#fff;background:hsla(0,0%,100%,.75);cursor:pointer;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.flickity-prev-next-button:hover{background:#fff}.flickity-prev-next-button:focus{outline:0;box-shadow:0 0 0 5px #09f}.flickity-prev-next-button:active{opacity:.6}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button:disabled{opacity:.3;cursor:auto}.flickity-prev-next-button svg{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-prev-next-button .arrow{fill:#333}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}</style><style data-context="foundation-slideout-css">.slideout-menu{position:fixed;left:0;top:0;bottom:0;right:auto;z-index:0;width:256px;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}.slideout-menu.pushit-right{left:auto;right:0}.slideout-panel{position:relative;z-index:1;will-change:transform}.slideout-open,.slideout-open .slideout-panel,.slideout-open body{overflow:hidden}.slideout-open .slideout-menu{display:block}.pushit{display:none}</style>
+<style type="text/css">
+
+#logo a.logo { font-size:25px; } .article p, .article li, .article address, .article dd, .article blockquote, .article td, .article th, p, li, address, dd, blockquote, td, th, .textwidget, .button, .entry-info  { font-size:14px}h1 {font-size:24px !important; }
+</style>
+    
+<link rel="amphtml" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/amp/"><style>.ios7.web-app-mode.has-fixed header{ background-color: rgba(3,122,221,.88);}</style>
+<script type="text/javascript" async="" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/a"></script></head>
+
+<body data-rsssl="1" class="post-template-default single single-post postid-200 single-format-standard custombody light">
+
+<div id="wrapper" style="padding-bottom: 78px;">
+
+    <header class="header">
+    
+        <div class="container">
+        
+            <div class="row">
+            
+                <div class="col-md-2">
+                
+                    <div id="logo">
+                            
+                        <a href="https://www.projectsof8051.com/" class="logo" title="Microtronics Technologies">Microtronics Technologies</a>    
+                    </div>
+                    
+                </div>
+                
+				
+				<div class="col-md-10">
+                    
+                    <nav id="mainmenu">
+                        
+						<ul id="menu-toplevelnav" class="menu l_tinynav1"><li id="menu-item-2383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2383"><a title="8051 Project List" href="https://www.projectsof8051.com/microcontroller-based-project-list/" style="padding-top: 32.5px; padding-bottom: 32.5px;">8051 List</a></li>
+<li id="menu-item-2928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2928"><a title="Arduino Project List" href="https://www.projectsof8051.com/arduino-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Arduino List</a></li>
+<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a title="PIC Project List" href="https://www.projectsof8051.com/pic-microcontroller-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">PIC List</a></li>
+<li id="menu-item-739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-739"><a href="https://www.projectsof8051.com/microcontroller-based-project-list/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Project Category<span class="sf-sub-indicator"> <i class="fa fa-chevron-down"></i> </span></a>
+<ul class="sub-menu" style="top: 90px;">
+	<li id="menu-item-2366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2366"><a href="https://www.projectsof8051.com/gps-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">GPS projects</a></li>
+	<li id="menu-item-2372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2372"><a href="https://www.projectsof8051.com/gsm-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">GSM Projects</a></li>
+	<li id="menu-item-4323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4323"><a title="IOT projects" href="https://www.projectsof8051.com/iot-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">IOT projects</a></li>
+	<li id="menu-item-2371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2371"><a href="https://www.projectsof8051.com/zigbee-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Zigbee Projects</a></li>
+	<li id="menu-item-2365" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2365"><a href="https://www.projectsof8051.com/android-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Android Projects</a></li>
+	<li id="menu-item-2369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2369"><a href="https://www.projectsof8051.com/touch-screen-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Touch Screen Projects</a></li>
+	<li id="menu-item-2367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2367"><a href="https://www.projectsof8051.com/rfid-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">RFID projects</a></li>
+	<li id="menu-item-2368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2368"><a href="https://www.projectsof8051.com/robots-and-robotics-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Robots and Robotics</a></li>
+	<li id="menu-item-2370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2370"><a href="https://www.projectsof8051.com/voice-controlled-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Voice Controlled Projects</a></li>
+	<li id="menu-item-3189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3189"><a href="https://www.projectsof8051.com/electronics-project-ideas/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Electronics Project Ideas</a></li>
+	<li id="menu-item-3229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3229"><a href="https://www.projectsof8051.com/wireless-communication-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Wireless communication projects</a></li>
+	<li id="menu-item-3230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3230"><a href="https://www.projectsof8051.com/sensor-based-projects/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Sensor Based Projects</a></li>
+</ul>
+</li>
+<li id="menu-item-2381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2381"><a href="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Search by Price<span class="sf-sub-indicator"> <i class="fa fa-chevron-down"></i> </span></a>
+<ul class="sub-menu" style="top: 90px;">
+	<li id="menu-item-2375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2375"><a href="https://www.projectsof8051.com/low-cost-microcontroller-projects-with-price-less-than-rs-3000/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Less than Rs. 2,999</a></li>
+	<li id="menu-item-2377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2377"><a href="https://www.projectsof8051.com/projects-with-price-less-than-rs-4900/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Rs. 3,000 to Rs. 4,999</a></li>
+	<li id="menu-item-2378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2378"><a href="https://www.projectsof8051.com/projects-with-price-rs-5000-to-rs-6999/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Rs. 5,000 to Rs. 6,999</a></li>
+	<li id="menu-item-2379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2379"><a href="https://www.projectsof8051.com/projects-with-price-rs-7000-to-rs-8999/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Rs. 7,000 to Rs. 8,999</a></li>
+	<li id="menu-item-2380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2380"><a href="https://www.projectsof8051.com/projects-with-price-rs-9000-to-rs-10999/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Rs. 9,000 to Rs. 10,999</a></li>
+	<li id="menu-item-2376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2376"><a href="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Greater than Rs. 11,000</a></li>
+</ul>
+</li>
+<li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-740"><a href="https://www.projectsof8051.com/contact-us/" style="padding-top: 32.5px; padding-bottom: 32.5px;">Contact Us</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-738"><a href="https://www.projectsof8051.com/how-to-order/" style="padding-top: 32.5px; padding-bottom: 32.5px;">How to Order</a></li>
+</ul><select id="tinynav1" class="tinynav tinynav1"><option selected="selected">Select an item</option><option value="https://www.projectsof8051.com/microcontroller-based-project-list/">8051 List</option><option value="https://www.projectsof8051.com/arduino-projects/">Arduino List</option><option value="https://www.projectsof8051.com/pic-microcontroller-projects/">PIC List</option><option value="https://www.projectsof8051.com/microcontroller-based-project-list/">Project Category</option><option value="https://www.projectsof8051.com/gps-based-projects/">- GPS projects</option><option value="https://www.projectsof8051.com/gsm-based-projects/">- GSM Projects</option><option value="https://www.projectsof8051.com/iot-projects/">- IOT projects</option><option value="https://www.projectsof8051.com/zigbee-based-projects/">- Zigbee Projects</option><option value="https://www.projectsof8051.com/android-based-projects/">- Android Projects</option><option value="https://www.projectsof8051.com/touch-screen-based-projects/">- Touch Screen Projects</option><option value="https://www.projectsof8051.com/rfid-based-projects/">- RFID projects</option><option value="https://www.projectsof8051.com/robots-and-robotics-projects/">- Robots and Robotics</option><option value="https://www.projectsof8051.com/voice-controlled-projects/">- Voice Controlled Projects</option><option value="https://www.projectsof8051.com/electronics-project-ideas/">- Electronics Project Ideas</option><option value="https://www.projectsof8051.com/wireless-communication-projects/">- Wireless communication projects</option><option value="https://www.projectsof8051.com/sensor-based-projects/">- Sensor Based Projects</option><option value="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/">Search by Price</option><option value="https://www.projectsof8051.com/low-cost-microcontroller-projects-with-price-less-than-rs-3000/">- Less than Rs. 2,999</option><option value="https://www.projectsof8051.com/projects-with-price-less-than-rs-4900/">- Rs. 3,000 to Rs. 4,999</option><option value="https://www.projectsof8051.com/projects-with-price-rs-5000-to-rs-6999/">- Rs. 5,000 to Rs. 6,999</option><option value="https://www.projectsof8051.com/projects-with-price-rs-7000-to-rs-8999/">- Rs. 7,000 to Rs. 8,999</option><option value="https://www.projectsof8051.com/projects-with-price-rs-9000-to-rs-10999/">- Rs. 9,000 to Rs. 10,999</option><option value="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/">- Greater than Rs. 11,000</option><option value="https://www.projectsof8051.com/contact-us/">Contact Us</option><option value="https://www.projectsof8051.com/how-to-order/">How to Order</option></select>                    
+                    </nav> 
+                                   
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </header>
+	
+<div class="container main-content page">
+
+	<div class="row">
+
+		<div class="col-md-8 right-sidebar">
+
+            <div class="row">
+
+                <div class="post-200 post type-post status-publish format-standard hentry category-energy-saving category-industrial-application-projects category-infrared-sensor-projects category-light-sensor-projects category-power-saver category-projects-with-price-rs-5000-to-rs-6999 category-sensor-based-projects tag-73 tag-89v51rd2 tag-bc547 tag-bulb tag-buzzer tag-darlington-pair tag-infrared tag-ldr tag-relay tag-tsop1738 post-container col-md-12">
+                    
+                            
+<div class="post-article">
+
+	<header class="title"><div class="line"><h1 class="title">Automatic Room light Controller with Visitor Counter</h1></div></header>
+<p><a href="https://www.projectsof8051.com/project-photos/1101-automatic-room-light-controller-with-visitor-counter-21.jpg" target="_blank" rel="noopener noreferrer"><img class="alignleft" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1101-automatic-room-light-controller-with-visitor-counter-11.jpg" alt="Automatic Room light Controller with Visitor Counter" width="200" height="150"></a><img class="alignright" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/output-guaranteed-free-shipping.png" alt="Free-shipping Output-guaranteed" width="130" height="125"></p>
+<h2>Project Cost: 5,700</h2>
+<h3>Dispatched in: 3 Days</h3>
+<h3>Project Code: 1101</h3>
+<p><a href="https://www.projectsof8051.com/how-to-order/"><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/order-now.png" alt="Order Now" width="155" height="40"></a></p>
+<h4>Project Photographs:</h4>
+<p><a href="https://www.projectsof8051.com/project-photos/1101-automatic-room-light-controller-with-visitor-counter-22.jpg" target="_blank" rel="noopener noreferrer"><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1101-automatic-room-light-controller-with-visitor-counter-12.jpg" alt="Automatic Room Light Controller" width="200" height="150"></a> &nbsp; <a href="https://www.projectsof8051.com/project-photos/1101-automatic-room-light-controller-with-visitor-counter-23.jpg" target="_blank" rel="noopener noreferrer"><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1101-automatic-room-light-controller-with-visitor-counter-13.jpg" alt="Bidirectional person counter" width="200" height="150"></a> &nbsp; <a href="https://www.projectsof8051.com/project-photos/1101-automatic-room-light-controller-with-visitor-counter-24.jpg" target="_blank" rel="noopener noreferrer"><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1101-automatic-room-light-controller-with-visitor-counter-14.jpg" alt="Person counter with roomlight controller" width="200" height="150"></a></p>
+<h4>Video of the Automatic Room light Controller with Visitor Counter</h4>
+<p><iframe src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/m8wXjV66tYs.htm" allow="autoplay; encrypted-media" allowfullscreen="" width="560" height="315" frameborder="0"></iframe></p>
+<h3>Download Synopsis of the project <a href="https://www.projectsof8051.com/projects/1101-automatic-room-light-controller-with-visitor-counter.pdf"><img src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/download-synopsis.png"></a></h3>
+<hr>
+<h4>Description of the project:</h4>
+<p>Wastage of electricity is one of the main problems which we are 
+facing now-a-days. In our home, school, colleges or industry we see that
+ fan/lights are kept on even if there are nobody in the room or 
+area/passage. This happens due to negligence or because we forgot to 
+turn lights off or when we are in hurry. To avoid all such situations we
+ have designed this project called <strong>“Automatic room light controller with visitor counter”</strong>. This <a title="Projects of 8051" href="https://www.projectsof8051.com/">project</a> has two modules, first one is known as <strong>“Digital Visitor counter”</strong> and the second module is known as <strong>“Automatic room light controller”</strong>.
+ The main concept behind this project is known as “Visitor counter” 
+which measures the number of persons entering in any room like seminar 
+hall, conference room, classroom. This function is implemented using a 
+pair of Infrared sensors. LCD display placed outside the room displays 
+this value of person count. This person count will be incremented if 
+somebody enters in the room and at that time lights are turned on. And 
+in a reverse way, person count will be decremented if somebody leaves 
+the room. When the number of persons inside the room is zero, lights 
+inside the room are turned off using a relay interface. In this way 
+Relay does the operation of “Automatic room light controller”. Since 
+this project uses 2 infrared sensors, it can be used as <a href="https://www.projectsof8051.com/bidirectional-visitor-counter/">Bidirectional person counter</a> as well.</p>
+<h4>Block Diagram of the project:</h4>
+<p><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1101-automatic-room-light-controller-with-visitor-counter.png" alt="Automatic Room light Controller with Visitor Counter"><br>
+<img class="alignleft" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/cd.gif" alt="CD" width="42" height="42"></p>
+<h4>You will get a CD with this project:</h4>
+<p>CD contains following things:</p>
+<ol>
+<li>Project <strong>Report</strong> in pdf format and in word format ( .doc or .docx )</li>
+<li><strong>Circuit</strong> diagram</li>
+<li><strong>PCB</strong> layout</li>
+<li>Microcontroller <strong>Program</strong> in assembly language</li>
+<li><strong>Hex</strong> file of the Microcontroller code</li>
+<li><strong>Datasheets</strong> of all the components / ICs used in the project</li>
+<li>Power point presentation / <strong>PPT</strong> file</li>
+</ol>
+<h4>Description in detail:</h4>
+<p>This is one of the best <a href="https://www.projectsof8051.com/sensor-based-projects/">sensor based projects for final year</a>. And following are the important modules in this project:</p>
+<p><strong>1. IR Transmitter:</strong> We have implemented the Person 
+counter module using 2 transmitters and 2 receivers. We have used 
+Infra-Red transmitters. The reason behind choosing IR LED is, infrared 
+beams are not visible to human eyes and they are not easily triggered by
+ other sources in the environment. Transmitters used are IR LEDs.</p>
+<p><strong>2. IR Receiver:</strong> We have used IR sensor as an 
+Infrared receiver. It is an active low device, which means it gives low 
+output when it receives the Infrared rays. So when the IR rays are 
+interrupted by any person then Microcontroller will receive a high pulse
+ from the IR receiver.</p>
+<p><strong>3. Microcontroller:</strong> This is the CPU (central 
+processing unit) of our project. We have used 89s51 which is a 
+Microcontroller of 8051 microcontroller family. The various functions of
+ Microcontroller are like:</p>
+<p><strong>I. Bidirectional Visitor counter section</strong> – It is 
+bidirectional because we have used 2 sensors on a single door. The 
+microcontroller does the function of Reading the digital input from two 
+infrared receivers and calculates the number of persons from them.</p>
+<p><strong>II. Display –</strong> Microcontroller sends the person count
+ to LCD so that the person operating this project should read the number
+ of persons inside the room.</p>
+<p><strong>III. Automatic Room Light controller section</strong> – 
+Microcontroller turns on the Room Light when person count is greater 
+than or equal to one. And turn off lights when the count is zero. This 
+is done by Relay. Since relay is used, you can connect an AC bulb or DC 
+bulb as per your requirement. We will provide a bulb holder to connect 
+AC bulb.</p>
+<p><strong>4. LCD Display:</strong> We have used 16×2 alphanumeric 
+Liquid Crystal Display (LCD) which means it can display alphabets along 
+with numbers on 2 lines each containing 16 characters. This display 
+should be placed outside the room. It displays various messages like 
+“Person Counter Incremented”, “Person Counter Decremented”, “No of 
+Person in Room = XYZ” here XYZ is the actual person count.</p>
+<p><strong>5. Relay:</strong> We have used 12 volt relay. Since 
+Microcontroller can not turn on relay directly, we have used a Relay 
+driver circuit. This circuit consists of a transistor which is used to 
+turn on relay through Microcontroller. We have used a SPDT relay. SPDT 
+means Single Pole Double Throw relay. In this project we have provided 2
+ pin connector as an output of Relay. One of these 2 pins is connected 
+to the Normally open terminal of the Relay which is also known as NO 
+contact.</p>
+<p><strong>6. Darlington pair:</strong> It is used to increase the 
+current gain. Output of 555 IC is given to the Darlington circuit. And 
+output of Darlington pair is given to IR led, thus it increases current 
+through Infrared LEDs which helps in increasing the range of infra-red 
+rays emitted from IR LEDs.</p>
+<h4>How to give demo of this project:</h4>
+<ul>
+<li>There are 2 transmitters and 2 receivers placed in front of each 
+other. Swap any object (like mobile) or your fingers (not single finger)
+ in front of those sensors.</li>
+<li>Then Microcontroller increments or decrements the counter.</li>
+<li>Once the count is non-zero, the room light is turned on using relay.</li>
+<li>Now swap object in reverse direction then the system decrements the 
+count. And room light is turned off once the count becomes zero.</li>
+</ul>
+<h4>Enhancement added to this project:</h4>
+<p>We have added Light Dependent Resistor (LDR) in this project.</p>
+<p><strong>Purpose of LDR:</strong> Light sensor – LDR will detect the sunlight in the room (or we can say LDR is used to detect daytime)</p>
+<p>If there is enough sunlight in the room (which means it is a daytime)
+ then the relay will not be turned on even if the person count is 
+greater than zero. In this mode it will work only as a Person counter to
+ save the electricity and works as <strong>energy saver</strong>. And if there insufficient sunlight in the room then only the relay will be turned on so as to turn on the bulb.</p>
+<h4>Applications of the project:</h4>
+<p>1. Digital Visitor Counter can be used in various rooms like seminar 
+hall, conference hall where the capacity of room is limited and should 
+not be exceeded. Project will display actual number of persons inside 
+the room.</p>
+<p>2. <strong>“Automatic Room light Controller with Visitor Counter”</strong> can be used in class rooms, study rooms in colleges.</p>
+<p>3. Automatic Room light Controller&nbsp; project can also be used in 
+our home because many times we come out of our bedroom or any other room
+ and we forgot to turn off the room light.</p>
+<p>4. Bidirectional person counter project can be used in Cinema halls, 
+multiplex, malls as well as in temples to count the number of person 
+entering inside. So that these places should not get over crowded to 
+avoid congestion.</p>
+<h4>Advantages of the project:</h4>
+<p>1. Main advantage of this project is that it helps in energy 
+conservation. Because when there is nobody inside the room then lights 
+are automatically turned off.</p>
+<p>2. Human efforts to count the number of person is eliminated. Since 
+this project does the automatic person counting with the help of two 
+sensors installed on door frame.</p>
+<h4>Project Future Development:</h4>
+<p>1. Voice alarm system can be added to indicate that room is full &amp; persons can’t enter inside.</p>
+<p>2. We can increase the maximum number of persons that can be counted by implementing the external EEPROM IC.</p>
+<p>3. We can send this data to a remote location using mobile or internet.</p>
+<h3>How to place these sensors on door:</h3>
+<p>Below is the diagrammatic representation on how the two sensors should be placed on the door frame</p>
+<p><img class="alignnone" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/08-bidirectional-visitor-counter.png" alt="Bidirectional visitor counter"></p>
+<p><a href="https://plus.google.com/112447100311300909006?rel=author">Snehal Shinde</a></p>
+<hr>
+<h5>Question and answers about this project:</h5>
+<p><strong>Question:</strong> Why you have used <a title="Infra-red sensors" href="https://www.projectsof8051.com/category/sensor-based-projects/infrared-sensor-projects/">Infrared sensors</a> to count the no of persons? What are the advantages?</p>
+<blockquote><p><strong>Answer: </strong>Advantage of using Infrared 
+sensor is that IR rays are not visible to human eyes. Also IR rays are 
+not affected by any other sources. For example: If you use LDR as a 
+sensor then it can be easily triggered by sunlight or any other sources 
+of light.</p></blockquote>
+<p><strong>Question:</strong> Which type of fan / lights can be controlled using this project? AC or DC ?</p>
+<blockquote><p><strong>Answer: </strong>We have used Relay to turn 
+on/off the fan or light. So we can use any type of fan / light. We can 
+either use AC fan or DC fan as well. Relay provides isolation from the 
+Microcontroller circuit. Thus user can use fan operating on 12 volt (CPU
+ fan) or a 230 volts AC fan.</p></blockquote>
+<p><strong>Question:</strong> Suppose two people walk into the room in 
+matching steps interval will it sense one intrusion? i.e. if two person 
+enter the room without any gap between them then will Microcontroller 
+will detect 2 person or only 1 person?</p>
+<blockquote><p><strong>Answer: </strong>If there is no gap between two 
+persons, then Microcontroller will sense that only 1 person has entered 
+into room. There should be some time delay (at-least half seconds delay 
+between 2 persons)</p></blockquote>
+<p><strong>Question:</strong> Are you using any separate counter IC for counting the persons or Microcontroller itself is configured as the counter?</p>
+<blockquote><p><strong>Answer:</strong> We have not used any separate IC
+ for the counting. Microcontroller does all the functions. It is central
+ processing unit for the project. It takes input pulses from sensor, 
+counts the person, activate/deactivates the relay.</p></blockquote>
+<p><strong>Question:</strong> How the counting of people using transmitters &amp; receivers works ?</p>
+<blockquote><p><strong>Answer:</strong> We have used to 2 pairs of 
+Transmitter and receiver. These should be placed on the door frame, 
+in-front of each other. If a person enters the room then first receiver 
+will cut and then second receiver will cut. Then Microcontroller will 
+increment the count. And if any person leaves the room then second 
+receiver will cut and then first receiver will cut. Then Microcontroller
+ decrements the count.</p></blockquote>
+<p><strong>Question:</strong> Concerning pets in the room, are they likely to trigger the system? What are the ways of avoiding false triggering?</p>
+<blockquote><p><strong>Answer:</strong> Yes, your Pets can trigger the 
+sensors. To avoid this situation, sensors should be placed at the higher
+ level from ground. You can keep them at 4 feet from ground. But 1 more 
+thing, if your pets jump 4 feet from ground then this will trigger the 
+sensor:-):D1</p></blockquote>
+<p><strong>Question:</strong> Can we use RFID reader &amp; RFID cards in this project along with the Infrared sensors ?<br>
+Is it possible that in entry operation, the RFID will count and in the exit operation, the infrared will count?</p>
+<blockquote><p><strong>Answer:</strong> Yes, this is possible. We can implement this project using RFID reader.<br>
+Whenever person enters the room, he/she will show the RFID card to RFID 
+sensor and the counter will count as one but the infrared entry will not
+ be activated. But when the person is leaving the room, the infrared 
+exit operation will be activated and the counter decrements by one and 
+the lights will turn off if nobody is in the room.<br>
+The RFID sensor will be placed outside the room for the Entry and the 
+infrared sensors will be placed at side of the door for the exit 
+operation. Meaning, if the person enters the room and he/she shows the 
+RFID card to RFID sensor, the RFID will activate but it disregards the 
+infrared entry operation. But leaving the room, the infrared will do the
+ task and the counter decrements.</p></blockquote>
+<p><strong>Question:</strong> If this project is used during daytime 
+then lights will always turn on &amp; off and this will lead to wastage 
+of electricity. How to overcome this situation? Or can’t this project be
+ used during day time?</p>
+<blockquote><p><strong>Answer:</strong> In some specific seminar hall, 
+conference rooms and study rooms, sunlight can not reach in daytime as 
+well. This is to give some presentations on projector or big screens. In
+ these cases lights are turned on even in daytime.<br>
+In other cases, where sunlight is enough and lights are not required in 
+day time, we can turn off the project so it will not function. And then 
+we can turn on the project in evening time.</p></blockquote>
+<p><strong>Question:</strong> I tried to replicate the circuit of the 
+transmitter and receiver on a bread board using the given components. 
+The output of both transmitters was adjusted to 38 KHz. But the IR 
+receiver is not giving active low output. What can be the problem?</p>
+<blockquote><p><strong>Answer:</strong> Use a potentiometer to adjust 
+the frequency of transmitter circuit. Also check the connections of 
+TSOP1738 IR receiver circuit, sometimes problem could be in receiver.</p></blockquote>
+<p><strong>Question:</strong> In this project can we use any sensor 
+other than TSOP1738? Any animal like dog may also enter the room &amp; 
+will get counted by the counter, this will lead to an error. Can u 
+suggest any other sensors which will detect only human being or human 
+body?</p>
+<blockquote><p><strong>Answer:</strong> TSOP1738 IR sensor is the most suitable sensor for this project.</p></blockquote>
+<p><strong>Question:</strong> I have prepared the circuit of 555 timer 
+which is giving output of 38khz. Problem is that the Red LED connected 
+to the IR receiver is always active (always turned on) and only blinks 
+when I try to cut the infrared beam from the arrangement of IR 
+transmitter and receiver which you sent me. What can be the problem?</p>
+<blockquote><p><strong>Answer:</strong> I have reviewed circuit and have
+ 2 suggestions. First one, Capacitor connected to Pin 5 of IC555 should 
+be 103 pico Farad. And the third terminal of potentiometer RV is left 
+open. It should be connected to second terminal of variable resistor RV.
+ Then set the resistance between pin 7 and 6 to 11.4 kohm. If the 
+circuit is still not working properly then try varying the 
+potentiometer, reduce the resistance. LED should turn off when 
+Transmitter is facing towards Receiver.</p></blockquote>
+<p><strong>Question:</strong>Can we get 120 volt as output of the relay 
+because here in Canada we have lights works in 120 volt ? The 
+transformer works at 240V but here in Canada we have 120V so do we 
+change the transformer to 120v if yes what transformer we need? Secondly
+ is it possible if we remove the transformer and directly supply 9volts 
+to the circuit? If yes then at what point we can connect the DC supply 
+because then we gave to skip the dc converter circuit?</p>
+<blockquote><p><strong>Answer:</strong> Relay does not give any voltage 
+output. Relay acts as a switch. About transformer: you can use 9volt/500
+ milliampere transformer. And if you want to operate this project on 
+regulated DC supply then you can remove transformer and you can directly
+ give 9 volts supply. You have to remove transformer wires and at the 
+same point you can give 9 volt DC supply.</p></blockquote>
+<p><strong>Question:</strong>Can this model hypothetically sense whether
+ a person is going in or out of a room? Can the IR sensors detect 
+obstructions only, not the direction?</p>
+<blockquote><p><strong>Answer:</strong> Yes, IR sensors detect the 
+direction. This project has 2 sensors. So when person goes in 1st sensor
+ is cut and then 2nd sensor is cut. Thus Microcontroller increments the 
+count. I have added image of how to install sensor on door on this 
+webpage: (see at the end/bottom of page)</p></blockquote>
+<p><strong>Question:</strong> Doubt concerning the placement of IR 
+sensor in the door frame. In the website you have given a chart showing 
+the placement of the circuit, in that picture the transmitter1 and 
+receiver2 is on one side of the frame and vice versa. Why is it so? Do 
+you have any specific reason? Can we place TX1 &amp; TX2 on the same 
+side?</p>
+<blockquote><p><strong>Answer:</strong> You can place Tx1 &amp; TX2 on 
+same side but it will reduce the efficiency of the receiver as both IR 
+receivers will receive the rays from both transmitters, so if the 
+distance between 2 receivers on one side of door is less then chances 
+are there that it will not identify that person is entering the room.</p></blockquote>
+<hr>
+<p><strong>Question:</strong> I too like this project. It’s a very great
+ idea!!! But i have a question. During night time when we go to sleep 
+will the lights be ON or we should TURN OFF it?</p>
+<blockquote><p><strong>Answer:</strong> As per the current functionality
+ of the project, lights will be turned on when there is one or more than
+ one person in room. So if you don’t need lights when you are going to 
+sleep, you should turn off the project.</p></blockquote>
+<p><strong>Question:</strong> what if i modified this project by adding 
+LDR. so the light will be turn on when the LDR detect darkness. And is 
+the microcontroller need to be programmed ?</p>
+<blockquote><p><strong>Answer:</strong> We have provided in the advanced
+ version of this project. LDR will detect the sunlight. So the 
+relay(light) will be turned on when there is darkness. And the 
+microcontroller is pre-programmed.</p></blockquote>
+<p><strong>Question:</strong> Does it works for same entry ,exit door..????</p>
+<blockquote><p><strong>Answer:</strong> Yes it works for the rooms which has only 1 door for entry and exit.</p></blockquote>
+<p><strong>Question:</strong> when a cat or any other animals comes across the ir sensor , will light remain on or off?</p>
+<blockquote><p><strong>Answer:</strong> Sensors does not differentiate 
+between a human being and an animal. So if any animal crosses the sensor
+ then the visitor counter will be incremented or decremented (depending 
+on the direction) and then lights will be turned on if count is greater 
+than zero.</p></blockquote>
+<p><strong>Question:</strong> Can you please explain the use of 555 Timer ICs in the project?</p>
+<blockquote><p><strong>Answer:</strong> 555 Timer IC is used as a driver circuit for IR LEDs.</p></blockquote>
+<p><strong>Question:</strong> What Will happen when the person enters 
+the room and passes through first sensor but for any reason he will 
+comes back before reaching to the second sensor??</p>
+<blockquote><p><strong>Answer:</strong> In such cases the counter will 
+not be incremented. There is a waiting period of 5 seconds. If the 
+second sensor is not interrupted within 5 seconds then the waiting 
+period gets over and action is cancelled.</p></blockquote>
+<p><strong>Question:</strong> Hi…. What is the use of buzzer in this project…</p>
+<blockquote><p><strong>Answer:</strong> Buzzer will be turned on when 
+maximum limit of person count has reached. Suppose a seminar hall has 
+seating capacity of 100 then only 100 people should be allowed inside 
+room. Whenever 101th person enters then buzzer should be turned on to 
+indicate that maximum capacity has reached. In this project we have set 
+the limit to 15 for demo purpose.</p></blockquote>
+<p><strong>Question:</strong> can we use LDR in this circuit so when sunlight is there lights will remain off</p>
+<blockquote><p><strong>Answer:</strong> We have already implemented this part as part of enhancement in our circuit.</p></blockquote>
+<p><strong>Question:</strong> Hi sir, this project is almost well for us but i want to know about disadvantages for this project. Thank sir.</p>
+<blockquote><p><strong>Answer:</strong> As mentioned in the description 
+above, limitation can be, “when two people enter without gap in between 
+them, then system will not be able to detect it” and another limitation 
+is of maximum person count which is 255.</p></blockquote>
+<p><strong>Question:</strong> Which sensor will be used to differentiate between human body and animal body?</p>
+<blockquote><p><strong>Answer:</strong> Its quite difficult to get such sensor.</p></blockquote>
+<p><strong><span style="color: #800000;">Do you have any question or any feedback about this project?</span></strong></p>
+<p><strong><span style="color: #800000;">Please email us your questions or write comments below.</span></strong></p>
+<hr>
+<h3>Subscribe to updates from Microtronics Technologies</h3>
+<form style="border: 1px solid #ccc; padding: 5px; text-align: center; font-weight: bold; background-color: #fa5858;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow">To Get FREE Updates + New Project Ideas!, please enter your email ID : <input style="width: 250px;" name="email" type="text"> <input name="uri" type="hidden" value="MicrotronicsTechnologies-ProjectsOf8051"><input name="loc" type="hidden" value="en_US"><input type="submit" value="Subscribe"></form>
+<div class="related-posts">
+<div id="related-posts-MRP_all" class="related-posts-type">
+<h2>Similar or Related Projects:</h2>
+<ul>
+<li><a href="https://www.projectsof8051.com/person-counter-and-password-detector-system/">Person counter and Password detector System</a></li>
+<li><a href="https://www.projectsof8051.com/automatic-floor-cleaner/">Automatic Floor Cleaner</a></li>
+</ul></div>
+</div><h3 class="comments">76 comments</h3>
+<section id="comments">
+	<ul class="commentlist">
+		   <li class="comment even thread-even depth-1" id="li-comment-742">
+ 
+ <article id="comment-742" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">supraja</span>
+            <time datetime="2013-07-23T12:37:17+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-742">23 July, 2013 at 12:37 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=742#respond" onclick='return addComment.moveForm( "comment-742", "742", "respond", "200" )' aria-label="Reply to supraja">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>when did the research on this project was started and by whom?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1618">
+ 
+ <article id="comment-1618" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Mohamad Nazreen</span>
+            <time datetime="2013-08-13T16:24:25+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-1618">13 August, 2013 at 4:24 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=1618#respond" onclick='return addComment.moveForm( "comment-1618", "1618", "respond", "200" )' aria-label="Reply to Mohamad Nazreen">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi im from malaysia, if i order this project, when can i get it?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-1621">
+ 
+ <article id="comment-1621" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2013-08-13T18:02:57+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-1621">13 August, 2013 at 6:02 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=1621#respond" onclick='return addComment.moveForm( "comment-1621", "1621", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Mohamad Nazreen, you can get this project in 7 working days.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-3080">
+ 
+ <article id="comment-3080" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">harit</span>
+            <time datetime="2013-09-16T20:50:42+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-3080">16 September, 2013 at 8:50 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=3080#respond" onclick='return addComment.moveForm( "comment-3080", "3080", "respond", "200" )' aria-label="Reply to harit">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>can anyone tell whether we can use a human sensing system to detect a person inside the room ???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-3108">
+ 
+ <article id="comment-3108" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2013-09-17T17:43:46+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-3108">17 September, 2013 at 5:43 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=3108#respond" onclick='return addComment.moveForm( "comment-3108", "3108", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi harit, PIR sensor can be used to detect human being / person 
+inside the room. But this project does not have PIR sensor. We have used
+ 2 infrared sensors and these are installed on door.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4091">
+ 
+ <article id="comment-4091" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Devang b patel</span>
+            <time datetime="2013-10-06T16:42:52+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-4091">6 October, 2013 at 4:42 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=4091#respond" onclick='return addComment.moveForm( "comment-4091", "4091", "respond", "200" )' aria-label="Reply to Devang b patel">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Sir is any sensor to detect light brightness and then on light at 
+day timeor keep it off At day time with blood sensor and temperature 
+sensor<br>
+Can u give any comment about this .</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62406">
+ 
+ <article id="comment-62406" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T10:10:53+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62406">10 October, 2014 at 10:10 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62406#respond" onclick='return addComment.moveForm( "comment-62406", "62406", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Devang b patel, we have already included Light sensor to detect daytime.<br>
+We can even add Temperature sensor as per your requirement. But please 
+send details of your customized requirement to our email id.<br>
+However it is not possible to add blood sensor in this project.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-4141">
+ 
+ <article id="comment-4141" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">mbavu</span>
+            <time datetime="2013-10-08T12:56:43+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-4141">8 October, 2013 at 12:56 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=4141#respond" onclick='return addComment.moveForm( "comment-4141", "4141", "respond", "200" )' aria-label="Reply to mbavu">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>am getting started with some project in the same line with this 
+only that mine has to consider all the appliances in the room e.g. TV, 
+radio set, fun, flat iron, computers, chargers. this will give some time
+ lag/allowance between the occupant living the room and switching off. 
+so my question is how viable this is?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-10955">
+ 
+ <article id="comment-10955" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2013-12-31T12:18:25+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-10955">31 December, 2013 at 12:18 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=10955#respond" onclick='return addComment.moveForm( "comment-10955", "10955", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi mbavu, yes this is feasible. We have provided a relay with this
+ project. It can be used to turn a single device or many devices at a 
+time. Also we can provide a time lag between switching off devices.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4350">
+ 
+ <article id="comment-4350" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Name</span>
+            <time datetime="2013-10-14T20:26:43+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-4350">14 October, 2013 at 8:26 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=4350#respond" onclick='return addComment.moveForm( "comment-4350", "4350", "respond", "200" )' aria-label="Reply to Name">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Guys very useful content.<br>
+Can u guys make a tutorial to detect room entry alert system using alarm with clear explanation ???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-4475">
+ 
+ <article id="comment-4475" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">guhan</span>
+            <time datetime="2013-10-17T07:49:49+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-4475">17 October, 2013 at 7:49 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=4475#respond" onclick='return addComment.moveForm( "comment-4475", "4475", "respond", "200" )' aria-label="Reply to guhan">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Sir i am guhan doing my BE. we are doing miniproject in our 
+college. I dont like to buy some projects in some other project center. 
+So i think some concept and when i take some notes related to my project
+ through internet i have found yours…..the same concept “automatic 
+on\off lights when there are person respectively”…. i am fan of 
+yours..:-)</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5283">
+ 
+ <article id="comment-5283" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Naveen</span>
+            <time datetime="2013-10-29T12:26:33+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-5283">29 October, 2013 at 12:26 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=5283#respond" onclick='return addComment.moveForm( "comment-5283", "5283", "respond", "200" )' aria-label="Reply to Naveen">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>How to differentiate two transmitter from their respective receivers?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62391">
+ 
+ <article id="comment-62391" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T09:42:46+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62391">10 October, 2014 at 9:42 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62391#respond" onclick='return addComment.moveForm( "comment-62391", "62391", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Naveen, Two transmitters should have sufficient distance 
+between each other so that they will not interfere with each other. We 
+have to take precaution that the IR rays of first transmitter should 
+fall only on first IR receiver and not on second receiver.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-6885">
+ 
+ <article id="comment-6885" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">naomi debrtsion</span>
+            <time datetime="2013-11-23T13:31:59+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-6885">23 November, 2013 at 1:31 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=6885#respond" onclick='return addComment.moveForm( "comment-6885", "6885", "respond", "200" )' aria-label="Reply to naomi debrtsion">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>HI GUYS…..i am impressed by ur work i am writing this because i 
+need ur help i am working with the same project on my final year 
+project,,i am computer engineering student in Eritrea(east Africa).can 
+you help me with some questions???thank you for this opportunity</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-10951">
+ 
+ <article id="comment-10951" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2013-12-31T12:14:30+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-10951">31 December, 2013 at 12:14 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=10951#respond" onclick='return addComment.moveForm( "comment-10951", "10951", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi naomi debrtsion, please post your questions.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-10836">
+ 
+ <article id="comment-10836" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">khushboo thakare</span>
+            <time datetime="2013-12-30T14:58:01+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-10836">30 December, 2013 at 2:58 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=10836#respond" onclick='return addComment.moveForm( "comment-10836", "10836", "respond", "200" )' aria-label="Reply to khushboo thakare">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>how can we implement this project by sending the data to a remote location using mobile or internet?<br>
+plzzzz reply as soon as possible…..</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-10950">
+ 
+ <article id="comment-10950" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2013-12-31T12:13:55+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-10950">31 December, 2013 at 12:13 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=10950#respond" onclick='return addComment.moveForm( "comment-10950", "10950", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi khushboo thakare, we can implement computer interfacing or GSM 
+modem interfacing with this project. GSM modem can be used to send SMS 
+to a mobile placed at remote location. And PC interfacing can be used to
+ send data to computer then a computer application can be developed to 
+send this data to internet.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-13368">
+ 
+ <article id="comment-13368" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Roshan</span>
+            <time datetime="2014-01-17T01:22:28+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-13368">17 January, 2014 at 1:22 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=13368#respond" onclick='return addComment.moveForm( "comment-13368", "13368", "respond", "200" )' aria-label="Reply to Roshan">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Sir, is there any kind of programming also involved with the 
+micro-controller 89s51 in this project? If yes then are programming for 
+counters and for LCD Displaying separately?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62440">
+ 
+ <article id="comment-62440" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T11:44:54+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62440">10 October, 2014 at 11:44 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62440#respond" onclick='return addComment.moveForm( "comment-62440", "62440", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Roshan, yes 89s51 microcontroller programming is involved in 
+this project. Although there are different functions for LCD and person 
+counter modules, but they are combined in a single program.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-14046">
+ 
+ <article id="comment-14046" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">shanthini</span>
+            <time datetime="2014-01-27T16:32:27+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-14046">27 January, 2014 at 4:32 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=14046#respond" onclick='return addComment.moveForm( "comment-14046", "14046", "respond", "200" )' aria-label="Reply to shanthini">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>hi i m shanthini.i m doin BE(EEE).i want some innovative,new idea 
+for my miniproject. please send some project.i have another doubt,if i  
+use PIR what will be the change..</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62442">
+ 
+ <article id="comment-62442" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T11:48:01+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62442">10 October, 2014 at 11:48 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62442#respond" onclick='return addComment.moveForm( "comment-62442", "62442", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi shanthini, PIR Sensor has large range as compared to normal IR 
+sensors. So it can detect the person but it gets difficult to understand
+ if the person is entering in the room or leaving the room.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-14986">
+ 
+ <article id="comment-14986" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Dilawer</span>
+            <time datetime="2014-02-11T21:57:04+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-14986">11 February, 2014 at 9:57 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=14986#respond" onclick='return addComment.moveForm( "comment-14986", "14986", "respond", "200" )' aria-label="Reply to Dilawer">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Greetings…… mn “Automatic room light controller with visitor 
+counter” purchase krna chta hun, bt with modfication  ky sath.i.e mn LCD
+ ky data ko remote location py via GSM modul ky through bhjna chta hun.<br>
+Kaya ap ya bna sakty hn??<br>
+plz reply fast…..</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-151878">
+ 
+ <article id="comment-151878" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T11:19:17+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151878">9 July, 2015 at 11:19 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151878#respond" onclick='return addComment.moveForm( "comment-151878", "151878", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Yes, we can send the data to remove location via GSM modem</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-15953">
+ 
+ <article id="comment-15953" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">anjali</span>
+            <time datetime="2014-03-01T12:29:35+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-15953">1 March, 2014 at 12:29 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=15953#respond" onclick='return addComment.moveForm( "comment-15953", "15953", "respond", "200" )' aria-label="Reply to anjali">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>1) why is IR sensor the best choice in this case…why not proximity sensor or any other sensor??/<br>
+2) what other alternative do we have for the Relay that we are using???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-151882">
+ 
+ <article id="comment-151882" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T11:24:12+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151882">9 July, 2015 at 11:24 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151882#respond" onclick='return addComment.moveForm( "comment-151882", "151882", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>IR sensor are low cost and can not be false triggered. Relay are best for turning on devices from 5V DC to 230V AC supply.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-20211">
+ 
+ <article id="comment-20211" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">kashaf</span>
+            <time datetime="2014-04-14T12:22:14+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-20211">14 April, 2014 at 12:22 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=20211#respond" onclick='return addComment.moveForm( "comment-20211", "20211", "respond", "200" )' aria-label="Reply to kashaf">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>why this project can’t work for 2 or more persons whlie entering in room at same time?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62448">
+ 
+ <article id="comment-62448" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T12:00:13+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62448">10 October, 2014 at 12:00 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62448#respond" onclick='return addComment.moveForm( "comment-62448", "62448", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi kashaf , microcontroller just reads the output signal from IR 
+receiver sensor. And this sensor does not recognize the number of 
+person. It just responds to the IR rays falling on it. So if two or more
+ person enters in room without any gap between them then it will treat 
+as a single pulse. And this pulse will be given to microcontroller for 
+further processing.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-23939">
+ 
+ <article id="comment-23939" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Jridi hamza</span>
+            <time datetime="2014-05-16T08:00:46+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-23939">16 May, 2014 at 8:00 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=23939#respond" onclick='return addComment.moveForm( "comment-23939", "23939", "respond", "200" )' aria-label="Reply to Jridi hamza">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>plz what’s the IR transmitter reference that you used in this project??<br>
+thank you <img draggable="false" class="emoji" alt="🙂" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/1f642.svg"></p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62451">
+ 
+ <article id="comment-62451" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T12:02:05+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62451">10 October, 2014 at 12:02 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62451#respond" onclick='return addComment.moveForm( "comment-62451", "62451", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Jridi hamza, IR transmitters are normal Infrared LEDs.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-30635">
+ 
+ <article id="comment-30635" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">shradha</span>
+            <time datetime="2014-07-10T21:27:16+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-30635">10 July, 2014 at 9:27 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=30635#respond" onclick='return addComment.moveForm( "comment-30635", "30635", "respond", "200" )' aria-label="Reply to shradha">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>can this project will work for 5 rooms simultaneously and how???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-151874">
+ 
+ <article id="comment-151874" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T10:37:40+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151874">9 July, 2015 at 10:37 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151874#respond" onclick='return addComment.moveForm( "comment-151874", "151874", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>No, this project can not work for multiple rooms simultaneously. You have to install one project for each room.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-33174">
+ 
+ <article id="comment-33174" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">anushka</span>
+            <time datetime="2014-07-22T20:39:58+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-33174">22 July, 2014 at 8:39 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=33174#respond" onclick='return addComment.moveForm( "comment-33174", "33174", "respond", "200" )' aria-label="Reply to anushka">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>hi guys … i’m a btech student and i’m planning to do this project 
+for my mini project. but our professors insist that we submit the 
+project without using any microcontrollers. is it possible to implement 
+the same idea without the use of any programmable ICs ??? please help,, 
+change of project is not allowed</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-33424">
+ 
+ <article id="comment-33424" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-07-23T18:06:24+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-33424">23 July, 2014 at 6:06 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=33424#respond" onclick='return addComment.moveForm( "comment-33424", "33424", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>H​i Anushka, This project can not be implemented without 
+microcontroller. Since it is really difficult to interface / drive LCD 
+display with analog circuit.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-35407">
+ 
+ <article id="comment-35407" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">bhakti2</span>
+            <time datetime="2014-08-03T11:58:07+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-35407">3 August, 2014 at 11:58 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=35407#respond" onclick='return addComment.moveForm( "comment-35407", "35407", "respond", "200" )' aria-label="Reply to bhakti2">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>can i interface dc motor on this object counter becaus when no. of entering person leave the room than door automaticaly closed</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62455">
+ 
+ <article id="comment-62455" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T12:03:57+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62455">10 October, 2014 at 12:03 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62455#respond" onclick='return addComment.moveForm( "comment-62455", "62455", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi bhakti2, yes we can connect DC motor. However for this we need 
+to modify the circuit. We have already developed another project “Person
+ counter and Password detector”, for more information, please visit this
+ webpage: <a href="https://www.projectsof8051.com/person-counter-and-password-detector-system/" rel="nofollow">https://www.projectsof8051.com/person-counter-and-password-detector-system/</a></p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-36133">
+ 
+ <article id="comment-36133" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Elaine Lombog</span>
+            <time datetime="2014-08-06T21:53:43+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-36133">6 August, 2014 at 9:53 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=36133#respond" onclick='return addComment.moveForm( "comment-36133", "36133", "respond", "200" )' aria-label="Reply to Elaine Lombog">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>hi, would it possible if I add temperature control in this project?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62456">
+ 
+ <article id="comment-62456" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T12:04:58+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62456">10 October, 2014 at 12:04 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62456#respond" onclick='return addComment.moveForm( "comment-62456", "62456", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Elaine Lombog, yes we can add temperature control. However for 
+this we need to modify the circuit. I would recommend to add a 
+comparator instead of a Analog to digital convertor.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-45050">
+ 
+ <article id="comment-45050" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">papun</span>
+            <time datetime="2014-09-02T00:50:27+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-45050">2 September, 2014 at 12:50 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=45050#respond" onclick='return addComment.moveForm( "comment-45050", "45050", "respond", "200" )' aria-label="Reply to papun">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>sir , can we connect at a time 1fan+2light+1tv with this project ?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-62457">
+ 
+ <article id="comment-62457" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T12:06:27+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62457">10 October, 2014 at 12:06 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62457#respond" onclick='return addComment.moveForm( "comment-62457", "62457", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi papun, yes we can connect these devices to a single relay. But 
+then all these devices will be turned on or off at the same time. If you
+ want con control them individually then we need to modify the circuit 
+to add 2 more relays.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-53410">
+ 
+ <article id="comment-53410" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Mukta</span>
+            <time datetime="2014-09-23T00:26:04+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-53410">23 September, 2014 at 12:26 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=53410#respond" onclick='return addComment.moveForm( "comment-53410", "53410", "respond", "200" )' aria-label="Reply to Mukta">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>I have a question,have you calculated how much energy is saved by 
+implementing this project. Can you provide a approx. quantified value in
+ terms of % or Watts,how much energy is saved?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-56773">
+ 
+ <article id="comment-56773" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Felix</span>
+            <time datetime="2014-10-02T01:40:48+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-56773">2 October, 2014 at 1:40 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=56773#respond" onclick='return addComment.moveForm( "comment-56773", "56773", "respond", "200" )' aria-label="Reply to Felix">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>since the counter will  either increment or decrement when there 
+is obstruction on the sensors, how can it differenciate between the 
+person that is entering or leaving the room?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-62545">
+ 
+ <article id="comment-62545" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2014-10-10T15:21:51+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-62545">10 October, 2014 at 3:21 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=62545#respond" onclick='return addComment.moveForm( "comment-62545", "62545", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Felix, please refer to the image shown under “How to place these sensors on door” section.<br>
+When person enters room then sensor sequence will be as below:<br>
+Initially first sensor will be activated and later second sensor will be activated.<br>
+And in case of person leaving the room, sensor sequence will be as below:<br>
+Initially second sensor will be activated and later first sensor will be activated.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-65046">
+ 
+ <article id="comment-65046" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Lakshmi</span>
+            <time datetime="2014-10-14T16:28:45+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-65046">14 October, 2014 at 4:28 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=65046#respond" onclick='return addComment.moveForm( "comment-65046", "65046", "respond", "200" )' aria-label="Reply to Lakshmi">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>How to check if IR sensor is working or not?and then transmitter and receiver circuit if both are have IR sensor or not?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-151881">
+ 
+ <article id="comment-151881" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T11:23:18+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151881">9 July, 2015 at 11:23 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151881#respond" onclick='return addComment.moveForm( "comment-151881", "151881", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>These details are mentioned in the project report. You will get all documents after purchasing the project.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-70406">
+ 
+ <article id="comment-70406" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">palak</span>
+            <time datetime="2014-10-26T12:46:43+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-70406">26 October, 2014 at 12:46 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=70406#respond" onclick='return addComment.moveForm( "comment-70406", "70406", "respond", "200" )' aria-label="Reply to palak">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>I have a doubt..how actually the IR transistors work over here?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-70669">
+ 
+ <article id="comment-70669" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">kinnu</span>
+            <time datetime="2014-10-27T14:55:01+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-70669">27 October, 2014 at 2:55 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=70669#respond" onclick='return addComment.moveForm( "comment-70669", "70669", "respond", "200" )' aria-label="Reply to kinnu">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>what is the range of these IR sensors?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-110032">
+ 
+ <article id="comment-110032" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Arif</span>
+            <time datetime="2015-01-05T13:16:22+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-110032">5 January, 2015 at 1:16 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=110032#respond" onclick='return addComment.moveForm( "comment-110032", "110032", "respond", "200" )' aria-label="Reply to Arif">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi I am Really looking forward to purchase this project… but i am 
+not getting how does both the Tx n Rx will count the person entering and
+ leaving the room with same door for entrance and exit….can u please 
+tell me the idea behind working of both the Tx and Rx for person 
+counting…</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-151880">
+ 
+ <article id="comment-151880" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T11:22:54+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151880">9 July, 2015 at 11:22 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151880#respond" onclick='return addComment.moveForm( "comment-151880", "151880", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Please refer to description and image given in the project details section above.<br>
+Counter will increment if first sensor is interrupted first and then second sensor.<br>
+And counter will decrement if second sensor is interuppted first and then first sensor.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-128832">
+ 
+ <article id="comment-128832" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">encikpatrick</span>
+            <time datetime="2015-03-22T20:35:03+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-128832">22 March, 2015 at 8:35 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=128832#respond" onclick='return addComment.moveForm( "comment-128832", "128832", "respond", "200" )' aria-label="Reply to encikpatrick">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>how about the price of this project ? i’m from malaysia , how can i get this project  ?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-151873">
+ 
+ <article id="comment-151873" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T10:31:06+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151873">9 July, 2015 at 10:31 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151873#respond" onclick='return addComment.moveForm( "comment-151873", "151873", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Yes, we can ship this project to Malaysia. Extra shipping charges 
+are applicable for delivery out of India. Please email us your address 
+in detail. We will reply you total cost including shipping charges.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-144239">
+ 
+ <article id="comment-144239" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">MOHAMMAD SARFARAZ</span>
+            <time datetime="2015-05-21T00:02:59+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-144239">21 May, 2015 at 12:02 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=144239#respond" onclick='return addComment.moveForm( "comment-144239", "144239", "respond", "200" )' aria-label="Reply to MOHAMMAD SARFARAZ">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>can we modify this project by using the RF ID READER?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-151871">
+ 
+ <article id="comment-151871" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T10:27:55+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151871">9 July, 2015 at 10:27 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151871#respond" onclick='return addComment.moveForm( "comment-151871", "151871", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Yes, we can do that. Actually we already have 2 such projects.<br>
+Project code – 1520 — RFid Based Person counter<br>
+and Project code – 1521 — RFid &amp; IR sensor Based Person counter with automatic room light controller</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-149273">
+ 
+ <article id="comment-149273" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">ramya</span>
+            <time datetime="2015-06-20T17:52:08+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-149273">20 June, 2015 at 5:52 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=149273#respond" onclick='return addComment.moveForm( "comment-149273", "149273", "respond", "200" )' aria-label="Reply to ramya">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>i have a doubt…we r using this project for turning on/off of fans 
+and lights….but if we want to use this device ….it should be 
+continuously supplied  with power..<br>
+   then what is the use……</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-151870">
+ 
+ <article id="comment-151870" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-07-09T10:25:25+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-151870">9 July, 2015 at 10:25 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=151870#respond" onclick='return addComment.moveForm( "comment-151870", "151870", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>This project requires power. But it is less compare the the power 
+consumption of Lights and Fans. And take an example of a big seminar 
+hall. Where there are like 15 / 20 bulbs and fans. In such places the 
+power consumption of project is negligible as compare to the electricity
+ wastage.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-160228">
+ 
+ <article id="comment-160228" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Rajkumar</span>
+            <time datetime="2015-09-06T16:12:38+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-160228">6 September, 2015 at 4:12 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=160228#respond" onclick='return addComment.moveForm( "comment-160228", "160228", "respond", "200" )' aria-label="Reply to Rajkumar">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Is the programme is alredy dumped by you ? Or we have to dump ?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-163398">
+ 
+ <article id="comment-163398" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2015-09-21T16:57:26+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-163398">21 September, 2015 at 4:57 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=163398#respond" onclick='return addComment.moveForm( "comment-163398", "163398", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Rajkumar, the microcontroller IC is already programmed.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-165835">
+ 
+ <article id="comment-165835" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">sunil kumar</span>
+            <time datetime="2015-10-07T13:15:03+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-165835">7 October, 2015 at 1:15 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=165835#respond" onclick='return addComment.moveForm( "comment-165835", "165835", "respond", "200" )' aria-label="Reply to sunil kumar">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>i am making the project of control the various home appliance with the help of plc so suggest me<br>
+first is what type of senser using<br>
+and other is what type of fan and motor used and how to count the person entered in room plzz suggest me</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-175587">
+ 
+ <article id="comment-175587" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Bijan</span>
+            <time datetime="2016-04-01T16:27:05+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-175587">1 April, 2016 at 4:27 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=175587#respond" onclick='return addComment.moveForm( "comment-175587", "175587", "respond", "200" )' aria-label="Reply to Bijan">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hey,  If some enters half (1st sensor) and return back,  then 
+another enters from other side half (2nd sensor),  It could increase or 
+decrease the count!   so how you have managed this problem??  thanks</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-178405">
+ 
+ <article id="comment-178405" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">B.GANESH</span>
+            <time datetime="2016-05-23T17:17:08+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-178405">23 May, 2016 at 5:17 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=178405#respond" onclick='return addComment.moveForm( "comment-178405", "178405", "respond", "200" )' aria-label="Reply to B.GANESH">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>suppose a person cut the first sensor and takes u turn before cutting the other sensor,will the project works.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-179501">
+ 
+ <article id="comment-179501" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2016-06-22T11:15:01+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-179501">22 June, 2016 at 11:15 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=179501#respond" onclick='return addComment.moveForm( "comment-179501", "179501", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi B.GANESH, yes the project will work. In this case it will not increment or decrement the count.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-179266">
+ 
+ <article id="comment-179266" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">prathima devi</span>
+            <time datetime="2016-06-14T12:46:25+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-179266">14 June, 2016 at 12:46 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=179266#respond" onclick='return addComment.moveForm( "comment-179266", "179266", "respond", "200" )' aria-label="Reply to prathima devi">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>NICE PROJECT<br>
+HOW ABOUT THE POWER CONSUMPTION WHEN WE ARE GOING OUT FOR SUCH LONG HOURS……..</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-180212">
+ 
+ <article id="comment-180212" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">DIVYANSHU</span>
+            <time datetime="2016-07-10T08:58:14+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-180212">10 July, 2016 at 8:58 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=180212#respond" onclick='return addComment.moveForm( "comment-180212", "180212", "respond", "200" )' aria-label="Reply to DIVYANSHU">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>sir i want this project so can you provide your contact information and email id</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-181967">
+ 
+ <article id="comment-181967" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Divyanshu Mahato</span>
+            <time datetime="2016-08-11T15:06:42+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-181967">11 August, 2016 at 3:06 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=181967#respond" onclick='return addComment.moveForm( "comment-181967", "181967", "respond", "200" )' aria-label="Reply to Divyanshu Mahato">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hello sir I am a 9th standard student and was also thinking of 
+this type of project only , so I thought to check out that whether it is
+ designed earlier or not this project is very helpful for me and I 
+wanted to ask you that should i use this project to present in the 
+science project exhibition or competition???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-184225">
+ 
+ <article id="comment-184225" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">naga akhil es</span>
+            <time datetime="2016-10-01T01:04:19+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-184225">1 October, 2016 at 1:04 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=184225#respond" onclick='return addComment.moveForm( "comment-184225", "184225", "respond", "200" )' aria-label="Reply to naga akhil es">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>sr can it sense both entering and leaving of a person simultaneously</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-188798">
+ 
+ <article id="comment-188798" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2017-01-11T06:52:24+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-188798">11 January, 2017 at 6:52 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=188798#respond" onclick='return addComment.moveForm( "comment-188798", "188798", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi naga akhil es,<br>
+It can not detect this situation. There should be only 1 person entering or leaving.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-199205">
+ 
+ <article id="comment-199205" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Nagraj</span>
+            <time datetime="2017-07-01T21:43:08+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-199205">1 July, 2017 at 9:43 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=199205#respond" onclick='return addComment.moveForm( "comment-199205", "199205", "respond", "200" )' aria-label="Reply to Nagraj">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>can u plzzz list all disadvantages?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-210078">
+ 
+ <article id="comment-210078" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Lucas mwita</span>
+            <time datetime="2017-11-13T14:41:47+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-210078">13 November, 2017 at 2:41 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=210078#respond" onclick='return addComment.moveForm( "comment-210078", "210078", "respond", "200" )' aria-label="Reply to Lucas mwita">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi am Lucas mwita from Tanzania if I wanna order this project how many day it take to get it</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-210936">
+ 
+ <article id="comment-210936" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2017-12-13T20:36:32+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-210936">13 December, 2017 at 8:36 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=210936#respond" onclick='return addComment.moveForm( "comment-210936", "210936", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Lucas mwita, you will get this project in 8 to 10 days in Tanzania</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-210469">
+ 
+ <article id="comment-210469" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">RAJ</span>
+            <time datetime="2017-11-24T09:43:59+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-210469">24 November, 2017 at 9:43 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=210469#respond" onclick='return addComment.moveForm( "comment-210469", "210469", "respond", "200" )' aria-label="Reply to RAJ">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>I want to know that if you are using controller 8051 is there any program written on it ?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor odd alt depth-2" id="li-comment-210546">
+ 
+ <article id="comment-210546" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2017-11-27T19:41:27+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-210546">27 November, 2017 at 7:41 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=210546#respond" onclick='return addComment.moveForm( "comment-210546", "210546", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Raj, yes there will be a program (HEX code) downloaded into the controller.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment even thread-odd thread-alt depth-1" id="li-comment-196049">
+ 
+ <article id="comment-196049" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Jambulingam Hemanth</span>
+            <time datetime="2018-05-11T07:50:31+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-196049">11 May, 2018 at 7:50 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=196049#respond" onclick='return addComment.moveForm( "comment-196049", "196049", "respond", "200" )' aria-label="Reply to Jambulingam Hemanth">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Hi Sir, I found this project interesting although the what will 
+happen if the two persons enter and exit at the same time then there 
+will be a collision between the entry and exit. how to overcome it? and 
+how it will differentiate in and out of person?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-even depth-1" id="li-comment-214578">
+ 
+ <article id="comment-214578" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Ch.anupama</span>
+            <time datetime="2018-07-25T07:16:32+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-214578">25 July, 2018 at 7:16 am</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=214578#respond" onclick='return addComment.moveForm( "comment-214578", "214578", "respond", "200" )' aria-label="Reply to Ch.anupama">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Sir can we increase maximum count of people upto 20 numbers 1 
+light should glow… Can we do it..? wat the changes we have to do for 
+that</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+<ul class="children">
+   <li class="comment byuser comment-author-snehal bypostauthor even depth-2" id="li-comment-214635">
+ 
+ <article id="comment-214635" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Microtronics Technologies</span>
+            <time datetime="2018-07-27T20:23:00+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-214635">27 July, 2018 at 8:23 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=214635#respond" onclick='return addComment.moveForm( "comment-214635", "214635", "respond", "200" )' aria-label="Reply to Microtronics Technologies">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>Yes, we can implement this. We need to change microcontroller coding for this.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-174957">
+ 
+ <article id="comment-174957" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">latha</span>
+            <time datetime="2018-09-10T16:58:23+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-174957">10 September, 2018 at 4:58 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=174957#respond" onclick='return addComment.moveForm( "comment-174957", "174957", "respond", "200" )' aria-label="Reply to latha">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>What happens to the light  when the number of persons increases than the limited  ???</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment even thread-even depth-1" id="li-comment-196105">
+ 
+ <article id="comment-196105" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Wisdom David</span>
+            <time datetime="2018-09-12T17:38:37+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-196105">12 September, 2018 at 5:38 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=196105#respond" onclick='return addComment.moveForm( "comment-196105", "196105", "respond", "200" )' aria-label="Reply to Wisdom David">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>How does this system operates during bed time, because it is an 
+automatic system and there has been a counted number of persons in a 
+room already . Thanks.</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+   <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-216203">
+ 
+ <article id="comment-216203" class="comment-container">
+	 
+
+     
+ 	<div class="comment-text">
+	   <header class="comment-author">
+       		
+        	<span class="author">Puneeth b s</span>
+            <time datetime="2018-09-22T23:34:45+00:00" class="comment-date">  
+      		<a href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#comment-216203">22 September, 2018 at 11:34 pm</a> - 
+	  		<a rel="nofollow" class="comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/?replytocom=216203#respond" onclick='return addComment.moveForm( "comment-216203", "216203", "respond", "200" )' aria-label="Reply to Puneeth b s">Reply</a>      		    		</time>
+            
+      </header>
+
+      	  
+	  <p>What is the scope and applications of this ?</p>
+      
+	</div>
+    
+ 	<div class="clear"></div>
+    
+</article>
+
+</li><!-- #comment-## -->
+	</ul>
+</section>
+
+
+
+
+<div class="clear"></div>
+
+<section class="contact-form">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.projectsof8051.com/automatic-room-light-controller-with-visitor-counter/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.projectsof8051.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Comment"> <input type="hidden" name="comment_post_ID" value="200" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f5b9e8968d"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1548844269485"></form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>    
+    <div class="clear"></div>
+
+</section><div class="clear"></div>
+</div>        
+                                        
+                    <div style="clear:both"></div>
+                    
+                </div>
+			
+            </div>
+		
+        </div>
+
+		
+	<div class="col-md-4">
+                
+		<div class="row">
+            
+			<div id="sidebar" class="col-md-12">
+                        
+				<div class="sidebar-box">
+
+					<div id="text-18" class="post-article widget-box widget_text">			<div class="textwidget"><p><strong>Call us:</strong> (+91) 9021 44 32 22</p>
+<p><strong>Email:</strong> info@mtronixtech.com</p>
+</div>
+		</div><div id="search-4" class="post-article widget-box widget_search"><header class="title"><div class="line"><h3>Search Projects</h3></div></header><form role="search" method="get" id="searchform" class="searchform" action="https://www.projectsof8051.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" name="s" id="s">
+					<input type="submit" id="searchsubmit" value="Search">
+				</div>
+			</form></div><div id="nav_menu-6" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Search by category</h3></div></header><div class="menu-search-by-category-container"><ul id="menu-search-by-category" class="menu"><li id="menu-item-2736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2736"><a title="Arduino Projects list" href="https://www.projectsof8051.com/arduino-projects/">Arduino Projects</a></li>
+<li id="menu-item-2586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2586"><a title="PIC Microcontroller project list" href="https://www.projectsof8051.com/pic-microcontroller-projects/">PIC Microcontroller Projects</a></li>
+<li id="menu-item-2930" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2930"><a title="8051 Microcontroller Project List" href="https://www.projectsof8051.com/microcontroller-based-project-list/">8051 Microcontroller Projects</a></li>
+<li id="menu-item-1178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1178"><a href="https://www.projectsof8051.com/gps-based-projects/">GPS Projects</a></li>
+<li id="menu-item-1182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1182"><a href="https://www.projectsof8051.com/gsm-based-projects/">GSM Projects</a></li>
+<li id="menu-item-4324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4324"><a title="IOT Projects" href="https://www.projectsof8051.com/iot-projects/">IOT Projects</a></li>
+<li id="menu-item-1177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1177"><a href="https://www.projectsof8051.com/android-based-projects/">Android Projects</a></li>
+<li id="menu-item-1181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1181"><a href="https://www.projectsof8051.com/touch-screen-based-projects/">Touch Screen Projects</a></li>
+<li id="menu-item-1179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1179"><a href="https://www.projectsof8051.com/rfid-based-projects/">RFID Projects</a></li>
+<li id="menu-item-1180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1180"><a href="https://www.projectsof8051.com/robots-and-robotics-projects/">Robots &amp; Robotics Projects</a></li>
+<li id="menu-item-2119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2119"><a href="https://www.projectsof8051.com/voice-controlled-projects/">Voice Controlled Projects</a></li>
+<li id="menu-item-2010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2010"><a href="https://www.projectsof8051.com/zigbee-based-projects/">Zigbee Projects</a></li>
+<li id="menu-item-3190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3190"><a href="https://www.projectsof8051.com/electronics-project-ideas/">Electronics Project Ideas</a></li>
+</ul></div></div><div id="nav_menu-2" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Search Projects by Price</h3></div></header><div class="menu-search-projects-by-price-container"><ul id="menu-search-projects-by-price" class="menu"><li id="menu-item-1811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1811"><a href="https://www.projectsof8051.com/low-cost-microcontroller-projects-with-price-less-than-rs-3000/">Less than Rs. 2,999</a></li>
+<li id="menu-item-1565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"><a href="https://www.projectsof8051.com/projects-with-price-less-than-rs-4900/">Rs. 3,000 to Rs. 4,999</a></li>
+<li id="menu-item-1532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1532"><a href="https://www.projectsof8051.com/projects-with-price-rs-5000-to-rs-6999/">Rs. 5,000 to Rs. 6,999</a></li>
+<li id="menu-item-1543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1543"><a href="https://www.projectsof8051.com/projects-with-price-rs-7000-to-rs-8999/">Rs. 7,000 to Rs. 8,999</a></li>
+<li id="menu-item-1553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1553"><a href="https://www.projectsof8051.com/projects-with-price-rs-9000-to-rs-10999/">Rs. 9,000 to Rs. 10,999</a></li>
+<li id="menu-item-1560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1560"><a href="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/">Greater than Rs. 11,000</a></li>
+</ul></div></div><div id="nav_menu-12" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Sensor based Projects</h3></div></header><div class="menu-sensor-based-projects-container"><ul id="menu-sensor-based-projects" class="menu"><li id="menu-item-3196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196"><a href="https://www.projectsof8051.com/sensor-based-projects/">All Sensor Based Projects</a></li>
+<li id="menu-item-4191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4191"><a href="https://www.projectsof8051.com/alcohol-sensor-projects/">Alcohol Sensor Projects</a></li>
+<li id="menu-item-1915" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1915"><a href="https://www.projectsof8051.com/category/sensor-based-projects/fingerprint-sensor/">Fingerprint</a></li>
+<li id="menu-item-4840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4840"><a title="Heartbeat sensor projects" href="https://www.projectsof8051.com/sensor-based-projects/heartbeat-sensor-projects/">Heartbeat sensor projects</a></li>
+<li id="menu-item-1638" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1638"><a href="https://www.projectsof8051.com/category/sensor-based-projects/humidity-sensor-projects/">Humidity</a></li>
+<li id="menu-item-1639" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1639"><a href="https://www.projectsof8051.com/category/sensor-based-projects/infrared-sensor-projects/">Infrared</a></li>
+<li id="menu-item-1640" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1640"><a href="https://www.projectsof8051.com/category/sensor-based-projects/liquid-level-sensor-projects/">Level</a></li>
+<li id="menu-item-1641" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1641"><a href="https://www.projectsof8051.com/category/sensor-based-projects/light-sensor-projects/">Light</a></li>
+<li id="menu-item-4221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4221"><a title="LPG Gas Sensor projects" href="https://www.projectsof8051.com/lpg-gas-sensor-projects/">LPG Gas Sensor projects</a></li>
+<li id="menu-item-1643" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1643"><a href="https://www.projectsof8051.com/category/sensor-based-projects/moisture-sensor-projects/">Moisture</a></li>
+<li id="menu-item-2013" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2013"><a href="https://www.projectsof8051.com/category/sensor-based-projects/pir-sensor/">PIR sensor</a></li>
+<li id="menu-item-4620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4620"><a href="https://www.projectsof8051.com/smoke-sensor-projects/">Smoke Sensor Projects</a></li>
+<li id="menu-item-4209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4209"><a title="Temperature Sensor Projects" href="https://www.projectsof8051.com/temperature-sensor-projects/">Temperature Sensor Projects</a></li>
+<li id="menu-item-2012" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2012"><a href="https://www.projectsof8051.com/category/sensor-based-projects/ultrasonic-sensor/">Ultrasonic Sensor</a></li>
+<li id="menu-item-1645" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1645"><a href="https://www.projectsof8051.com/category/sensor-based-projects/vibration-sensor-projects/">Vibration</a></li>
+<li id="menu-item-1646" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1646"><a href="https://www.projectsof8051.com/category/sensor-based-projects/weight-sensor-projects/">Weight</a></li>
+</ul></div></div><div id="nav_menu-4" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Search projects by Application</h3></div></header><div class="menu-search-projects-by-application-container"><ul id="menu-search-projects-by-application" class="menu"><li id="menu-item-3994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3994"><a title="Agricultural Project" href="https://www.projectsof8051.com/agricultural-electronics-projects/">Agricultural Project</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-261"><a href="https://www.projectsof8051.com/category/industrial-application-projects/">Industrial Application Projects</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-260"><a href="https://www.projectsof8051.com/category/military-applications/">Military Applications</a></li>
+<li id="menu-item-280" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-280"><a href="https://www.projectsof8051.com/category/medical-application-projects/">Medical Application Projects</a></li>
+<li id="menu-item-270" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-270"><a href="https://www.projectsof8051.com/category/security-systems-projects/">Security Systems</a></li>
+<li id="menu-item-1648" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1648"><a href="https://www.projectsof8051.com/category/power-saver/">Power Saver</a></li>
+<li id="menu-item-3963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3963"><a href="https://www.projectsof8051.com/energy-saving-electronics-projects/">Energy Saving Electronics Projects</a></li>
+</ul></div></div><div id="nav_menu-2" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Search Projects by Price</h3></div></header><div class="menu-search-projects-by-price-container"><ul id="menu-search-projects-by-price-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1811"><a href="https://www.projectsof8051.com/low-cost-microcontroller-projects-with-price-less-than-rs-3000/">Less than Rs. 2,999</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"><a href="https://www.projectsof8051.com/projects-with-price-less-than-rs-4900/">Rs. 3,000 to Rs. 4,999</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1532"><a href="https://www.projectsof8051.com/projects-with-price-rs-5000-to-rs-6999/">Rs. 5,000 to Rs. 6,999</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1543"><a href="https://www.projectsof8051.com/projects-with-price-rs-7000-to-rs-8999/">Rs. 7,000 to Rs. 8,999</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1553"><a href="https://www.projectsof8051.com/projects-with-price-rs-9000-to-rs-10999/">Rs. 9,000 to Rs. 10,999</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1560"><a href="https://www.projectsof8051.com/projects-with-price-greater-than-rs-11000/">Greater than Rs. 11,000</a></li>
+</ul></div></div><div id="nav_menu-11" class="post-article widget-box widget_nav_menu"><header class="title"><div class="line"><h3>Wireless Communication</h3></div></header><div class="menu-wireless-communication-container"><ul id="menu-wireless-communication" class="menu"><li id="menu-item-3228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3228"><a title="Wireless communication projects" href="https://www.projectsof8051.com/wireless-communication-projects/">Wireless communication projects</a></li>
+<li id="menu-item-2011" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2011"><a href="https://www.projectsof8051.com/category/wireless-communication-projects/zigbee/">Zigbee</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-72"><a href="https://www.projectsof8051.com/category/wireless-communication-projects/dtmf-based-projects/">DTMF</a></li>
+<li id="menu-item-4090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4090"><a title="Bluetooth Projects" href="https://www.projectsof8051.com/bluetooth-based-projects/">Bluetooth Projects</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="https://www.projectsof8051.com/category/wireless-communication-projects/sms-based-projects/">SMS based</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74"><a href="https://www.projectsof8051.com/category/wireless-communication-projects/rf-remote/">RF Remote</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-73"><a href="https://www.projectsof8051.com/category/wireless-communication-projects/mobile-controlled/">Mobile Controlled</a></li>
+</ul></div></div>
+				</div>
+                        
+			</div>
+            
+		</div>
+                    
+	</div>
+    
+    
+        <div class="clear"></div>
+
+           
+    </div>
+    
+</div>
+
+    <footer id="footer">
+       
+        <div class="container">
+        
+             <div class="row copyright">
+             
+                <div class="col-md-6">
+                
+                    <p>
+                    
+                                                  Copyright Microtronics Technologies 2019 
+                         
+                        | By <a href="https://www.themeinprogress.com/" target="_blank">Theme in Progress</a> |
+                        <a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
+                        
+                    </p>
+                
+                </div>
+                
+                <div class="col-md-6">
+                    
+                    <div class="socials"></div>
+    
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    </footer>
+
+</div>
+
+<!-- Powered by WPtouch: 4.3.34 --><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.projectsof8051.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="Automatic%20Room%20light%20Controller%20&amp;%20Person%20Counter_files/b0861.js"></script>
+
+
+
+
+
+</body></html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced 
+Minified using disk
+
+Served from: www.projectsof8051.com @ 2019-01-30 08:32:54 by W3 Total Cache
+-->

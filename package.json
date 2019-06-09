@@ -1,0 +1,31 @@
+{
+  "name": "trainTrackingSystem",
+  "version": "1.0.0",
+  "description": "Train Tracking System",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app"
+  },
+  "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "bcryptjs": "*",
+    "bluebird": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "file-system": "^2.2.2",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "api",
+    "authenticate"
+  ],
+  "author": "Wonde mack Pro",
+  "license": "ISC"
+}
