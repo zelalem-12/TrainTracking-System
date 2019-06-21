@@ -10,9 +10,7 @@ router.post('/', (req, res, next) => {
   const newTrain = new Train({
   trainId: req.body.trainId,
   line: req.body.line,
-  speed: req.body.speed,
-  'location.latitude': req.body.latitude,
-  'location.longitude': req.body.longitude
+  speed: req.body.speed
   });
   Train.addTrain(newTrain, (err,train) => {
     if(err) throw err;
@@ -32,13 +30,17 @@ router.post('/', (req, res, next) => {
 });
 
 // update train location 
-router.put('/:id/:lat/:long', (req, res) => {
+router.post('/update-location', (req, res) => {
   const 
-    trainId = req.params.id,
+    trainId = req.body.trainID,
     location ={
-      latitude: req.params.lat,
-    longitude: req.params.long
+    latitude: req.body.latitude,
+    longitude: req.body.longitude
+    }; 
+    if(location.latitude-0.005 <= location.latitude+0.005 && location.longitude-0.005 <= location.longitude+0.005){
+      station = "";
     }
+
   Train.updateTrainLocation(trainId, location, (err, train) => {
     if (err) throw err
          else {
@@ -46,6 +48,16 @@ router.put('/:id/:lat/:long', (req, res) => {
            }
 });
 });
+
+router.get('/lcd-display/:trainID',(req, res) => {
+  const trainID = req.params.trainID;
+  Train.getStationAndTime(Train, (err, train) => {
+    if (err) throw err
+    if(!train) {res.json({success: false, msg: 'Ops There is no train for this ID'});}
+    else res.send(train.ariving_time);
+  });
+});
+
 // get nearlly trains
 router.get('/get-train/:lat/:long', (req, res) => {
   const 
@@ -54,17 +66,17 @@ router.get('/get-train/:lat/:long', (req, res) => {
 const
       latitude_range = 1,
       longitude_range = 1.5;
-      user_location_lat_min = user_location_lat  - latitude_range,
-      user_location_lat_max = user_location_lat + latitude_range,
+      user_location_lat_min = user_location_lat-latitude_range,
+      user_location_lat_max = user_location_lat+latitude_range,
 
       user_location_long_min = user_location_long-longitude_range,
-      user_location_long_max = user_location_long + longitude_range;
+      user_location_long_max = user_location_long+longitude_range;
       
   Train.getAllNearlyTrains(user_location_lat_min, user_location_lat_max, user_location_long_min, user_location_long_max, (err, nearlyTrains) => {
          if (err) throw err
          if(!nearlyTrains || nearlyTrains.length ==0) {res.json({success: false, msg: 'Ops There is no train near to you'});}
        else {
-         console.log(nearlyTrains);
+        //  console.log(nearlyTrains);
          const trains = [];
         var R = 6371e3; // metres
         var φ1 = user_location_lat * (Math.PI/180);
@@ -79,9 +91,9 @@ const
                   Math.cos(φ1) * Math.cos(φ2) *
                   Math.sin(Δλ/2) * Math.sin(Δλ/2);
           var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-          var distance = R * c;
-          train.ariving_time = 5;  
-          console.log(train);
+         train.ariving_time = (R * c) / train.speed;  
+          // console.log(train.ariving_time);
+           console.log(train);
           trains.push(train);
         }
           res.json({success: true, data: trains }); }

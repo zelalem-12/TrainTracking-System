@@ -5,6 +5,8 @@ const TrainSchema = mongoose.Schema({
     trainId: { type: Number, required: true },
     line: {type: Number, required: true}, 
     speed: {type: Number, required: true},
+    ariving_time: {type: Number, defualt: 1},
+    "station": {type : String, defualt: "Giorgis"},
     location: {
     latitude:{type: Number, defualt: 9.02 },
     longitude:{type: Number, defualt: 38.5 }
@@ -19,7 +21,11 @@ module.exports.addTrain = function(newTrain, callback){
 };
 //  updating the rrain location
 module.exports.updateTrainLocation = function(train_id, location, callback){
-  Train.updateOne({trainId:train_id}, {$set: {location: location}}, {new:true}, callback);
+  Train.updateOne({trainId:train_id}, {_id:0, ariving_time: 1}, {new:true}, callback);
+};
+//  getting train location and ariving time
+module.exports.getStationAndTime = function(train_id, callback){
+  Train.find({trainId:train_id}, {$set: {location: location}}, {new:true}, callback);
 };
 
   // getting the nearby trains 
